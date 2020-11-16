@@ -92,7 +92,8 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="name@example.com"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress"
+                    android:autofillHints="email" />
             </LinearLayout>
 
         </LinearLayout>

@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
-import { Text, StyleSheet, View, ScrollView, Image, Button, Alert, TextInput } from 'react-native';
+import {
+    Text,
+    StyleSheet,
+    View,
+    ScrollView,
+    Image,
+    Button,
+    Alert,
+    TextInput
+    } from 'react-native';
 
 const styles = StyleSheet.create({
   titleText: {
@@ -18,10 +27,6 @@ const styles = StyleSheet.create({
 
 export default class AwesomeProjectApp extends Component {
   render() {
-    let pic = {
-        uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
-    };
-
     return (
     <ScrollView
       contentContainerStyle="scrollView"
@@ -29,14 +34,16 @@ export default class AwesomeProjectApp extends Component {
     >
       {/* Title top bar */}
       <View style={{ width: "100%", aspectRatio: 8, paddingLeft: 10, paddingBottom: 10, justifyContent: "flex-end", backgroundColor: 'rgb(80, 160, 140)' }}>
-          <Text style={ styles.titleText }>Example 1</Text>
+          <Text style={ styles.titleText }>Example 1 - React Native</Text>
       </View>
 
       {/* Content below title bar */}
       <View style={{ width: "100%" }}>
         {/* Middle flexbox containing image */}
         <View style={{ padding: 10, alignItems: "center", justifyContent: "center" }}>
-            <Image source={pic} style={{ width: "100%", aspectRatio: 1.78 }}/>
+            <Image
+                source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'}}
+                style={{ width: "100%", aspectRatio: 1.78 }}/>
         </View>
 
         {/* Vertical flexbox containing all buttons */}

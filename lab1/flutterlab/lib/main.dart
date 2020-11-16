@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 void main() => runApp(MaterialApp(
   home: Scaffold(
     appBar: AppBar(
-      title: Text('Example 1'),
+      title: Text('Example 1 - Flutter'),
     ),
     body: ListView(
         children: <Widget>[
