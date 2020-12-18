@@ -1,6 +1,6 @@
 # lab2
 
-Credit card application
+An interactive credit card form
 
 ## Getting Started
 
