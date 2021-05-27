@@ -264,12 +264,14 @@ class MyCustomFormState extends State<MyCustomForm> {
                         )
                       ]),
                     ),
-                    RaisedButton(
-                      color: Colors.blue,
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        onPrimary: Colors.blue
+                      ),
                       onPressed: () {
                         // Validate returns true if the form is valid, otherwise false.
                         if (_formKey.currentState.validate()) {
-                          Scaffold.of(context)
+                          ScaffoldMessenger.of(context)
                               .showSnackBar(SnackBar(content: Text('Processing Data')));
                         }
                       },
