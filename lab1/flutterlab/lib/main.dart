@@ -13,15 +13,15 @@ void main() => runApp(MaterialApp(
           Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                FlatButton(
+                TextButton(
                     onPressed: () => AlertDialog(title: Text('This button does nothing')),
                     child: Text('Button'),
-                    color: Colors.grey
+                    style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.grey)),
                 ),
-                FlatButton(
+                TextButton(
                     onPressed: () => AlertDialog(title: Text('This button does nothing')),
                     child: Text('Button'),
-                    color: Colors.grey
+                    style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.grey)),
                 )
               ]
           ),
@@ -58,3 +58,18 @@ void main() => runApp(MaterialApp(
       )
     )
 ));
+
+class NothingButton extends StatelessWidget {
+  const NothingButton({Key? key, this.child}) : super(key: key);
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      onPressed: () => AlertDialog(title: Text('This button does nothing')),
+      child: Text('Button'),
+      style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.grey)),
+    );
+  }
+}
