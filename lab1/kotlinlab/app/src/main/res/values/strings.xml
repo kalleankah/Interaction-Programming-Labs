@@ -1,10 +1,7 @@
 <resources>
     <string name="app_name">kotlinlab</string>
-    <string name="splash_photo">Splash Photo</string>
-    <string name="button1">Button1</string>
-    <string name="button2">Button2</string>
-    <string name="button3">Button3</string>
-    <string name="button4">Button4</string>
+    <string name="splash_image">Splash Image</string>
+    <string name="buttonText">Button</string>
     <string name="email">Email:</string>
     <string name="name_example_com">name@example.com</string>
 </resources>
