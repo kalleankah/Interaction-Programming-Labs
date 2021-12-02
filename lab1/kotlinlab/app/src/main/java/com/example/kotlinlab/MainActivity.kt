@@ -16,17 +16,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val imageView = findViewById<ImageView>(R.id.splashImage)
-        val executor = Executors.newSingleThreadExecutor()
         val handler = Handler(Looper.getMainLooper())
 
-        var image: Bitmap? = null
-
-        executor.execute {
-            val imageURL = "https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg"
+        Executors.newSingleThreadExecutor().execute {
+            val url = "https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg"
 
             try {
-                val `in` = java.net.URL(imageURL).openStream()
-                image = BitmapFactory.decodeStream(`in`)
+                val `in` = java.net.URL(url).openStream()
+                val image = BitmapFactory.decodeStream(`in`)
 
                 handler.post {
                     imageView.setImageBitmap(image)
